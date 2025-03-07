@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
       </button>
       <div class="chatbot">
         <header>
-          <h2>Chase</h2>
+          <h2>Digital Teller</h2>
           <span class="close-btn material-symbols-outlined">close</span>
         </header>
         <ul class="chatbox">

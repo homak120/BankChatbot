@@ -12,7 +12,8 @@ const initializeChatbot = () => {
 
   // API configuration
   const API_KEY = "PASTE-YOUR-API-KEY"; // Your API key here
-  const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+  //const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+  const API_URL = `http://localhost:11434/api/generate`;
 
   const createChatLi = (message, className) => {
     // Create a chat <li> element with passed message and className
@@ -28,6 +29,7 @@ const initializeChatbot = () => {
     const messageElement = chatElement.querySelector("p");
 
     // Define the properties and message for the API request
+    /*
     const requestOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -40,6 +42,18 @@ const initializeChatbot = () => {
         ],
       }),
     };
+    */
+    const requestBody = {
+      model: "deepseek-r1:1.5b",  // Ensure you have this model installed in Ollama
+      prompt: userMessage,
+      stream: false
+    };
+
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(requestBody),
+    };
 
     // Send POST request to API, get response and set the reponse as paragraph text
     try {
@@ -48,7 +62,11 @@ const initializeChatbot = () => {
       if (!response.ok) throw new Error(data.error.message);
 
       // Get the API response text and update the message element
-      messageElement.textContent = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1");
+
+      // Remove think portion to keep the output simple
+      const cleanedResponse = data.response.replace(/<think>.*<\/think>\s*/s, '');
+      messageElement.textContent = cleanedResponse;
+      //messageElement.textContent = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1");
     } catch (error) {
       // Handle error
       messageElement.classList.add("error");
