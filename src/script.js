@@ -1,3 +1,4 @@
+const chatbotContainer = document.querySelector("#chatbot-container");
 const chatbotToggler = document.querySelector(".chatbot-toggler");
 const closeBtn = document.querySelector(".close-btn");
 const chatbox = document.querySelector(".chatbox");
@@ -92,5 +93,5 @@ chatInput.addEventListener("keydown", (e) => {
 });
 
 sendChatBtn.addEventListener("click", handleChat);
-closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
-chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+closeBtn.addEventListener("click", () => chatbotContainer.classList.remove("show-chatbot"));
+chatbotToggler.addEventListener("click", () => chatbotContainer.classList.toggle("show-chatbot"));

@@ -27,7 +27,7 @@ const styles = `
   transition: all 0.2s ease;
 }
 
-body.show-chatbot .chatbot-toggler {
+#chatbot-container.show-chatbot .chatbot-toggler {
   transform: rotate(90deg);
 }
 
@@ -37,11 +37,11 @@ body.show-chatbot .chatbot-toggler {
 }
 
 .chatbot-toggler span:last-child,
-body.show-chatbot .chatbot-toggler span:first-child {
+#chatbot-container.show-chatbot .chatbot-toggler span:first-child {
   opacity: 0;
 }
 
-body.show-chatbot .chatbot-toggler span:last-child {
+#chatbot-container.show-chatbot .chatbot-toggler span:last-child {
   opacity: 1;
 }
 
@@ -62,7 +62,7 @@ body.show-chatbot .chatbot-toggler span:last-child {
   transition: all 0.1s ease;
 }
 
-body.show-chatbot .chatbot {
+#chatbot-container.show-chatbot .chatbot {
   opacity: 1;
   pointer-events: auto;
   transform: scale(1);
