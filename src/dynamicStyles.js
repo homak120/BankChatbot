@@ -1,3 +1,14 @@
+//dynamicStyles.js
+//Google Fonts Link For Icons
+const link1 = document.createElement('link');
+link1.rel = 'stylesheet';
+link1.href = 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0';
+document.head.appendChild(link1);
+
+const link2 = document.createElement('link');
+link2.rel = 'stylesheet';
+link2.href = 'https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0';
+document.head.appendChild(link2);
 const styles = `
 /* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
@@ -92,7 +103,7 @@ header h2 {
 
 .chatbot .chatbox {
   overflow-y: auto;
-  height: 510px;
+  height: 410px;
   padding: 30px 20px 100px;
 }
 
