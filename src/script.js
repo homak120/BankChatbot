@@ -1,5 +1,5 @@
 //script.js
-const initializeChatbot = () => {
+function initializeChatbot() {
   const chatbotContainer = document.querySelector("#chatbot-container");
   const chatbotToggler = document.querySelector(".chatbot-toggler");
   const closeBtn = document.querySelector(".close-btn");
@@ -13,7 +13,8 @@ const initializeChatbot = () => {
   // API configuration
   const API_KEY = "PASTE-YOUR-API-KEY"; // Your API key here
   //const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
-  const API_URL = `http://localhost:11434/api/generate`;
+  //const API_URL = `http://localhost:11434/api/generate`;
+  const API_URL = `http://localhost:5566/api/generate`;
 
   const createChatLi = (message, className) => {
     // Create a chat <li> element with passed message and className
@@ -90,7 +91,7 @@ const initializeChatbot = () => {
 
     setTimeout(() => {
       // Display "Thinking..." message while waiting for the response
-      const incomingChatLi = createChatLi("Thinking...", "incoming");
+      const incomingChatLi = createChatLi("Typing...", "incoming");
       chatbox.appendChild(incomingChatLi);
       chatbox.scrollTo(0, chatbox.scrollHeight);
       generateResponse(incomingChatLi);
