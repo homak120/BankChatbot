@@ -3,17 +3,19 @@ function RenderChatbot() {
     
     const body = document.body;
     const host = document.createElement("div");
+    body.insertBefore(host, body.firstChild);
     
-    //host.attachShadow({ mode: 'open' });
+    const shadow = host.attachShadow({ mode: 'open' });
     //body.insertBefore(host, body.firstChild);
-    //setChatbotStyles(host);
+    setChatbotStyles(shadow);
 
-    setChatbotStyles(document.body);
+    //setChatbotStyles(body);
     
     const chatbotContainer = document.createElement("div");
     chatbotContainer.id = "chatbot-container";
-    body.insertBefore(chatbotContainer, body.firstChild);
-    //host.shadowRoot.appendChild(chatbotContainer);
+    //host.appendChild(chatbotContainer);
+    
+    host.shadowRoot.appendChild(chatbotContainer);
     
 
     chatbotContainer.innerHTML = `
@@ -40,7 +42,7 @@ function RenderChatbot() {
     `;
 
     // Initialize the chatbot
-    initializeChatbot();
+    initializeChatbot(host.shadowRoot);
   }
 function isLocalhost() {
     const hostname = window.location.hostname;
