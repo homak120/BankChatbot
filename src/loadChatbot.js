@@ -4,19 +4,12 @@ function RenderChatbot() {
     const body = document.body;
     const host = document.createElement("div");
     body.insertBefore(host, body.firstChild);
-    
     const shadow = host.attachShadow({ mode: 'open' });
-    //body.insertBefore(host, body.firstChild);
     setChatbotStyles(shadow);
 
-    //setChatbotStyles(body);
-    
     const chatbotContainer = document.createElement("div");
     chatbotContainer.id = "chatbot-container";
-    //host.appendChild(chatbotContainer);
-    
     host.shadowRoot.appendChild(chatbotContainer);
-    
 
     chatbotContainer.innerHTML = `
       <button class="chatbot-toggler" style="z-index: 9999;">
