@@ -12,6 +12,100 @@ body {
   background: #E3F2FD;
 }
 
+header {
+  background: #004481;
+  color: #fff;
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header .logo h1 {
+  font-size: 1.5rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+main .hero {
+  background: #004481;
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+main .hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+main .hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+main .hero button {
+  background: #fff;
+  color: #004481;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+main .services {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+main .services h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+main .services .service {
+  margin-bottom: 20px;
+}
+
+main .services .service h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+main .services .service p {
+  font-size: 1rem;
+}
+
+footer {
+  background: #004481;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .chatbot-toggler {
   position: fixed;
   bottom: 30px;
@@ -107,7 +201,7 @@ header h2 {
   border-radius: 25px;
 }
 
-.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-thumb {
+chatbot :where(.chatbox, textarea)::-webkit-scrollbar-thumb {
   background: #ccc;
   border-radius: 25px;
 }
