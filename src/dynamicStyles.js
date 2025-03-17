@@ -84,7 +84,7 @@ function setChatbotStyles(root) {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: #005eb8;
+    background: rgb(2, 98, 188);
     transition: all 0.2s ease;
     }
 
@@ -134,7 +134,7 @@ function setChatbotStyles(root) {
     position: relative;
     text-align: center;
     color: #fff;
-    background: #005eb8;
+    background: rgb(2, 98, 188);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
@@ -189,7 +189,7 @@ function setChatbotStyles(root) {
     text-align: center;
     line-height: 32px;
     align-self: flex-end;
-    background: #005eb8;
+    background: rgb(2, 98, 188);
     border-radius: 4px;
     margin: 0 10px 7px 0;
     }
@@ -201,7 +201,7 @@ function setChatbotStyles(root) {
     max-width: 75%;
     color: #fff;
     font-size: 0.95rem;
-    background: #005eb8;
+    background: rgb(2, 98, 188);
     }
 
     .chatbox .incoming p {
@@ -242,7 +242,7 @@ function setChatbotStyles(root) {
 
     .chat-input span {
     align-self: flex-end;
-    color: #005eb8;
+    color: rgb(2, 98, 188);
     cursor: pointer;
     height: 55px;
     display: flex;

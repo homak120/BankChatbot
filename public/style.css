@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  background: #005eb8;
+  background: #0054a2;
   color: #fff;
   padding: 20px 0;
 }
@@ -44,7 +44,7 @@ header nav ul li a {
 }
 
 main .hero {
-  background: #005eb8;
+  background: #0054a2;
   color: #fff;
   padding: 100px 20px;
   text-align: center;
@@ -62,7 +62,7 @@ main .hero p {
 
 main .hero button {
   background: #fff;
-  color: #005eb8;
+  color: #0054a2;
   border: none;
   padding: 10px 20px;
   font-size: 1rem;
@@ -94,7 +94,7 @@ main .services .service p {
 }
 
 footer {
-  background: #005eb8;
+  background: #0054a2;
   color: #fff;
   padding: 20px 0;
   text-align: center;

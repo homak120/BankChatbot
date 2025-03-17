@@ -20,7 +20,7 @@ function initializeChatbot(root) {
     // Create a chat <li> element with passed message and className
     const chatLi = document.createElement("li");
     chatLi.classList.add("chat", `${className}`);
-    let chatContent = className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
+    let chatContent = className === "outgoing" ? `<p class='Chatbubble'></p>` : `<span class="material-symbols-outlined">smart_toy</span><p class='Chatbubble'></p>`;
     chatLi.innerHTML = chatContent;
     chatLi.querySelector("p").textContent = message;
     return chatLi; // return chat <li> element
@@ -45,7 +45,7 @@ function initializeChatbot(root) {
     };
     */
     const requestBody = {
-      model: "deepseek-r1:1.5b",  // Ensure you have this model installed in Ollama
+      model: "BankChatbotModel:03",  // Ensure you have this model installed in Ollama
       prompt: userMessage,
       stream: false
     };
@@ -65,8 +65,9 @@ function initializeChatbot(root) {
       // Get the API response text and update the message element
 
       // Remove think portion to keep the output simple
-      const cleanedResponse = data.response.replace(/<think>.*<\/think>\s*/s, '');
-      messageElement.textContent = cleanedResponse;
+      let cleanedResponse = data.response.replace(/<think>.*<\/think>\s*/s, '');
+      cleanedResponse = marked.parse(cleanedResponse);
+      messageElement.innerHTML = cleanedResponse;
       //messageElement.textContent = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1");
     } catch (error) {
       // Handle error
@@ -90,7 +91,7 @@ function initializeChatbot(root) {
     chatbox.scrollTo(0, chatbox.scrollHeight);
 
     setTimeout(() => {
-      // Display "Thinking..." message while waiting for the response
+      // Display "Typing..." message while waiting for the response
       const incomingChatLi = createChatLi("Typing...", "incoming");
       chatbox.appendChild(incomingChatLi);
       chatbox.scrollTo(0, chatbox.scrollHeight);

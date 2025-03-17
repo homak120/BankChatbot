@@ -2,6 +2,7 @@
 
 # Directories
 src_dir="src"
+public_dir="public"
 dist_dir="dist"
 output_file="$dist_dir/combined.js"
 
@@ -20,6 +21,18 @@ fi
 if [ -f "$output_file" ]; then
     rm "$output_file"
 fi
+
+# Concatenate all .js files from src_dir into output_file
+for file in "$public_dir"/*.js; do
+    if [ -f "$file" ]; then
+        echo "Adding $file to $output_file"
+        cat "$file" >> "$output_file"
+        echo -e "\n" >> "$output_file"  # Add a newline for separation
+    else
+        echo "No JavaScript files found in '$public_dir'."
+        exit 1
+    fi
+done
 
 # Concatenate all .js files from src_dir into output_file
 for file in "$src_dir"/*.js; do
