@@ -193,15 +193,21 @@ function setChatbotStyles(root) {
     border-radius: 4px;
     margin: 0 10px 7px 0;
     }
+    .chatbox .chat p ul li {
+    margin-left: 15px;
+    }
 
     .chatbox .chat p {
-    white-space: pre-wrap;
     padding: 12px 16px;
     border-radius: 10px 10px 0 10px;
-    max-width: 75%;
+    max-width: 80%;
     color: #fff;
     font-size: 0.95rem;
     background: rgb(2, 98, 188);
+    }
+
+    .chatbox .chat p p {
+        padding: 0px 0px 0px 0px;
     }
 
     .chatbox .incoming p {

@@ -1,6 +1,7 @@
 const express = require('express');
 const proxy = require('express-http-proxy');
 const cors = require('cors');
+const { Readable } = require('stream');
 
 const app = express();
 const PORT = 5566;
@@ -19,7 +20,6 @@ app.use(cors()); // This will allow requests from any origin
 app.post('/api/generate', async (req, res) => {
   try {
     console.log('Income Request:', req.body);
-    //const { prompt } = req.body;
     console.dir(req.body, { depth: null, colors: true });
     const response = await fetch(OLLAMA_API_URL + '/api/generate', {
       method: 'POST',
@@ -31,8 +31,13 @@ app.post('/api/generate', async (req, res) => {
       throw new Error(`Ollama API error: ${response.statusText}`);
     }
 
-    const data = await response.json();
-    res.json(data);
+    if (req.body.stream) {
+      // Convert web ReadableStream to Node.js Readable stream then pipe
+      Readable.fromWeb(response.body).pipe(res);
+    } else {
+      const data = await response.json();
+      res.json(data);
+    }
   } catch (error) {
     console.error('Error communicating with Ollama API:', error);
     res.status(500).send('Server Error');

@@ -45,37 +45,66 @@ function initializeChatbot(root) {
     };
     */
     const requestBody = {
-      model: "BankChatbotModel:03",  // Ensure you have this model installed in Ollama
+      model: "BankChatbotModel:03", // Ensure you have this model installed in Ollama 
       prompt: userMessage,
-      stream: false
+      stream: true    // Enable streaming
     };
-
+    
     const requestOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(requestBody),
     };
-
-    // Send POST request to API, get response and set the reponse as paragraph text
+    
     try {
       const response = await fetch(API_URL, requestOptions);
-      const data = await response.json();
-      if (!response.ok) throw new Error(data.error.message);
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error.message);
+      }
+    
+      // Clear the existing content in the element
+      messageElement.innerHTML = "";
+      let messageText = "";
 
-      // Get the API response text and update the message element
+      // Create a reader to process the stream
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder("utf-8");
+      let done = false;
+    
+      // Continuously read stream chunks until done
+      while (!done) {
+        const { value, done: doneReading } = await reader.read();
+        done = doneReading;
+        // Decode the chunk into text
+        const chunkText = decoder.decode(value, { stream: true });
+        if (chunkText) {
+          // Split the input string into lines and remove any empty lines
+          const lines = chunkText.split('\n').filter(line => line.trim() !== '');
 
-      // Remove think portion to keep the output simple
-      let cleanedResponse = data.response.replace(/<think>.*<\/think>\s*/s, '');
-      cleanedResponse = marked.parse(cleanedResponse);
-      messageElement.innerHTML = cleanedResponse;
-      //messageElement.textContent = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1");
+          // Parse each JSON object and extract the response property
+          const concatenatedResponse = lines
+            .map(line => JSON.parse(line))
+            .map(obj => obj.response)
+            .join('');
+          // Append the new text chunk to the message text
+          messageText += concatenatedResponse;
+          
+          // Append the new text chunk to the HTML element
+          messageElement.innerHTML = marked.parse(messageText);
+          // Optionally, scroll the chatbox as new content arrives
+          chatbox.scrollTo(0, chatbox.scrollHeight);
+        }
+      }
     } catch (error) {
-      // Handle error
       messageElement.classList.add("error");
       messageElement.textContent = error.message;
+      console.error(error);
     } finally {
+      // Final scroll update if needed
       chatbox.scrollTo(0, chatbox.scrollHeight);
     }
+    
   };
 
   const handleChat = () => {
