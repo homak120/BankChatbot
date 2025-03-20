@@ -1,3 +1,5 @@
+![Getting Started](doc/gettingStart.png)
+
 # BankChatBot
 
 BankChatBot is a learning project designed to demonstrate the potential use of Local Language Models (LLMs) for customer service in a banking environment. This project shows how you can run a customer-specific LLM locally, providing AI-powered chatbot functionality with Ollama. It serves as a valuable starting point for anyone looking to learn how to set up a custom LLM for various use cases, such as banking or other industries.
@@ -81,11 +83,11 @@ This GIF shows the chatbot handling queries related to opening a bank account, s
 
 3. **Smart AI Response to Account Opening Queries**  
 This GIF highlights the chatbot’s intelligent response when a customer asks about account opening. The AI provides a helpful and informative reply.
-![Smart AI Response to Account Opening Queries](doc/smartAIResponse.gif)
+<img src="doc/smartAIResponse.gif" alt="Smart AI Response to Account Opening Queries" width="400" height="450" />
 
 4. **Restricted Assistance Based on Configured Roles**  
 This GIF demonstrates how the chatbot restricts its responses based on pre-configured roles. For example, the chatbot may limit assistance to account opening questions only.
-![Restricted Assistance Based on Configured Roles](doc/restrictOnlyAssistBasedOnConfiguredRole.gif)
+<img src="doc/restrictOnlyAssistBasedOnConfiguredRole.gif" alt="Restricted Assistance Based on Configured Roles" width="400" height="450" />
 
 ---
 
