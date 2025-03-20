@@ -66,25 +66,26 @@ If you are running the chatbot UI and Ollama on separate domains or different se
 
 This will ensure the UI can communicate with the Ollama instance even if they are running on different domains. If you are running both on `localhost`, you don’t need to use this script as the UI can directly access the local Ollama instance.
 
-### Demo GIFs
+### Demo
 
 The following demo GIFs illustrate the functionality and features of the BankChatBot:
 
 1. **Starting the Chatbot UI and Initiating the Conversation**  
-This GIF demonstrates the chatbot UI loading and initiating a conversation with the customer.  
-**Path**: `doc/staringChatbotConversation.gif`
+This GIF demonstrates the chatbot UI loading and initiating a conversation with the customer.
+![Starting Chatbot Conversation](doc/staringChatbotConversation.gif)
+
 
 2. **Assisting with Account Opening Questions**  
-This GIF shows the chatbot handling queries related to opening a bank account, showcasing its ability to address common customer questions.  
-**Path**: `doc/assistAccountOpeningQuestions.gif`
+This GIF shows the chatbot handling queries related to opening a bank account, showcasing its ability to address common customer questions.
+![Assisting with Account Opening Questions](doc/assistAccountOpeningQuestions.gif)
 
 3. **Smart AI Response to Account Opening Queries**  
-This GIF highlights the chatbot’s intelligent response when a customer asks about account opening. The AI provides a helpful and informative reply.  
-**Path**: `doc/smartAIResponse.gif`
+This GIF highlights the chatbot’s intelligent response when a customer asks about account opening. The AI provides a helpful and informative reply.
+![Smart AI Response to Account Opening Queries](doc/smartAIResponse.gif)
 
 4. **Restricted Assistance Based on Configured Roles**  
-This GIF demonstrates how the chatbot restricts its responses based on pre-configured roles. For example, the chatbot may limit assistance to account opening questions only.  
-**Path**: `doc/restrictOnlyAssistBasedOnConfiguredRole.gif`
+This GIF demonstrates how the chatbot restricts its responses based on pre-configured roles. For example, the chatbot may limit assistance to account opening questions only.
+![Restricted Assistance Based on Configured Roles](doc/restrictOnlyAssistBasedOnConfiguredRole.gif)
 
 ---
 
