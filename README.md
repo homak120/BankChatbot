@@ -77,7 +77,7 @@ This GIF demonstrates the chatbot UI loading and initiating a conversation with 
 
 2. **Assisting with Account Opening Questions**  
 This GIF shows the chatbot handling queries related to opening a bank account, showcasing its ability to address common customer questions.
-<img src="doc/assistAccountOpeningQuestions.gif" alt="Assisting with Account Opening Questions" width="300" height="200" />
+<img src="doc/assistAccountOpeningQuestions.gif" alt="Assisting with Account Opening Questions" width="300" height="400" />
 
 3. **Smart AI Response to Account Opening Queries**  
 This GIF highlights the chatbot’s intelligent response when a customer asks about account opening. The AI provides a helpful and informative reply.
