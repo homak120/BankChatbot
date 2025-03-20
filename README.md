@@ -1,4 +1,4 @@
-![Getting Started](doc/gettingStart.png)
+![Getting Started](doc/BankChatbotLogo.webp)
 
 # BankChatBot
 
