@@ -30,28 +30,36 @@ BankChatBot is a learning project designed to demonstrate the potential use of L
 ### Step-by-step Setup
 
 1. **Set Up Ollama for Local AI**  
-   Start Ollama to serve AI responses locally by running the following command in your terminal:
+   This will start the Ollama server, making it available for interactions from the BankChatBot UI.
 
-This will start the Ollama server, making it available for interactions from the BankChatBot UI.
+- Start Ollama to serve AI responses locally by running the following command in your terminal:
+    ```bash
+     ollama serve
+    ```
 
-2. **Download a Language Model**
-
-Ollama offers a straightforward way to download and manage open source language models directly on your local machine. For this project setup, you need to download the Gemma3 model with 4 billion parameters. Use the following command to initiate the download:
-
-  ```bash
-  ollama pull gemma3:4b
-  ```
+- Ollama offers a straightforward way to download and manage open source language models directly on your local machine. For this project setup, you need to download the Gemma3 model with 4 billion parameters. Use the following command to initiate the download:
+   ```bash
+   ollama pull gemma3:4b
+   ```
+- Confirm Gemma 3 model is downloaded
+   ```bash
+   ollama list
+   ```
 
 3. **Create the Custom BankChatbotModel from ModelFile**  
-After starting Ollama, create the custom BankChatbotModel to handle the chatbot queries. The model file will configure the chatbot for the specific use case of bank-related questions.
+   After starting Ollama, create the custom BankChatbotModel to handle the chatbot queries. The model file will configure the chatbot for the specific use case of bank-related questions.
 
 - To create the model, run the following command:
   ```
   ollama create BankChatbotModel -f ModelFile
   ```
 
-This command will use the provided `ModelFile` already in the repo to create the custom model for the chatbot.
+   This command will use the provided `ModelFile` already in the repo to create the custom model for the chatbot.
 
+- Confirm your custome model is created
+   ```bash
+   ollama list
+   ```
 4. **Run the Node.js Server for the Chatbot UI**  
 Start the local chatbot UI by running the following commands:
 
