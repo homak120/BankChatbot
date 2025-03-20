@@ -20,32 +20,17 @@ function initializeChatbot(root) {
     // Create a chat <li> element with passed message and className
     const chatLi = document.createElement("li");
     chatLi.classList.add("chat", `${className}`);
-    let chatContent = className === "outgoing" ? `<p class='Chatbubble'></p>` : `<span class="material-symbols-outlined">smart_toy</span><p class='Chatbubble'></p>`;
+    let chatContent = className === "outgoing" ? `<div class='Chatbubble'></div>` : `<span class="material-symbols-outlined">smart_toy</span><div class='Chatbubble'></div>`;
     chatLi.innerHTML = chatContent;
-    chatLi.querySelector("p").textContent = message;
+    chatLi.querySelector("div").textContent = message;
     return chatLi; // return chat <li> element
   };
 
   const generateResponse = async (chatElement) => {
-    const messageElement = chatElement.querySelector("p");
+    const messageElement = chatElement.querySelector("div");
 
-    // Define the properties and message for the API request
-    /*
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        contents: [
-          {
-            role: "user",
-            parts: [{ text: userMessage }],
-          },
-        ],
-      }),
-    };
-    */
     const requestBody = {
-      model: "BankChatbotModel:03", // Ensure you have this model installed in Ollama 
+      model: "BankChatbotModel:latest", // Ensure you have this model installed in Ollama 
       prompt: userMessage,
       stream: true    // Enable streaming
     };

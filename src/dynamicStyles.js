@@ -1,5 +1,4 @@
 //dynamicStyles.js
-//Google Fonts Link For Icons
 function setChatbotStyles(root) {
     const link1 = document.createElement('link');
     link1.rel = 'stylesheet';
@@ -193,11 +192,12 @@ function setChatbotStyles(root) {
     border-radius: 4px;
     margin: 0 10px 7px 0;
     }
-    .chatbox .chat p ul li {
+    .chatbox .chat .Chatbubble ul li {
     margin-left: 15px;
     }
 
-    .chatbox .chat p {
+    .chatbox .chat .Chatbubble {
+    white-space: pre-wrap;
     padding: 12px 16px;
     border-radius: 10px 10px 0 10px;
     max-width: 80%;
@@ -206,20 +206,16 @@ function setChatbotStyles(root) {
     background: rgb(2, 98, 188);
     }
 
-    .chatbox .chat p p {
-        padding: 0px 0px 0px 0px;
-    }
-
-    .chatbox .incoming p {
+    .chatbox .incoming .Chatbubble {
     border-radius: 10px 10px 10px 0;
     }
 
-    .chatbox .chat p.error {
+    .chatbox .chat div.error {
     color: #721c24;
     background: #f8d7da;
     }
 
-    .chatbox .incoming p {
+    .chatbox .incoming .Chatbubble {
     color: #000;
     background: #f2f2f2;
     }
@@ -290,16 +286,7 @@ function setChatbotStyles(root) {
     }
     `;
 
-/*
-    const styleSheet = document.createElement("style");
-    styleSheet.type = "text/css";
-    styleSheet.innerText = styles;
-    root.appendChild(styleSheet);
-    */
-
-
     const sheet = new CSSStyleSheet();
     sheet.replaceSync(styles);
     root.adoptedStyleSheets = [sheet];
-    
 }

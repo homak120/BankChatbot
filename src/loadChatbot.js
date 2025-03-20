@@ -24,7 +24,7 @@ function RenderChatbot() {
         <ul class="chatbox">
           <li class="chat incoming">
             <span class="material-symbols-outlined">smart_toy</span>
-            <p>Hi there 👋<br />I’m your Virtual Assistant. I’m here to help you open an account and answer any questions along the way. How can I assist you today?</p>
+            <p class='Chatbubble'>Hi there 👋<br />I’m your Virtual Assistant. I’m here to help you open an account and answer any questions along the way. How can I assist you today?</p>
           </li>
         </ul>
         <div class="chat-input">
