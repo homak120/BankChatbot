@@ -14,7 +14,7 @@ BankChatBot is a learning project designed to demonstrate the potential use of L
 
 ### Prerequisites
 
-1. **Install Ollama (Optional)**  
+1. **Install Ollama**  
    If you don’t have Ollama installed, you can follow these instructions to set it up locally:
 
    - **macOS**: 
