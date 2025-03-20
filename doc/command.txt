@@ -1,0 +1,5 @@
+ffmpeg -i assistAccountOpeningQuestions.mov -vf "fps=10,scale=980:-1:flags=lanczos" -c:v gif assistAccountOpeningQuestions.gif
+ffmpeg -i restrictOnlyAssistBasedOnConfiguredRole.mov -vf "fps=10,scale=980:-1:flags=lanczos" -c:v gif restrictOnlyAssistBasedOnConfiguredRole.gif 
+ffmpeg -i smartAIResponse.mov -vf "fps=10,scale=980:-1:flags=lanczos" -c:v gif smartAIResponse.gif 
+ffmpeg -i staringChatbotConversation.mov -vf "fps=10,scale=980:-1:flags=lanczos" -c:v gif staringChatbotConversation.gif 
+
