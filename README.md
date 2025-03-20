@@ -34,7 +34,15 @@ BankChatBot is a learning project designed to demonstrate the potential use of L
 
 This will start the Ollama server, making it available for interactions from the BankChatBot UI.
 
-2. **Create the Custom BankChatbotModel from ModelFile**  
+2. **Download a Language Model**
+
+Ollama offers a straightforward way to download and manage open source language models directly on your local machine. For this project setup, you need to download the Gemma3 model with 4 billion parameters. Use the following command to initiate the download:
+
+  ```bash
+  ollama pull gemma3:4b
+  ```
+
+3. **Create the Custom BankChatbotModel from ModelFile**  
 After starting Ollama, create the custom BankChatbotModel to handle the chatbot queries. The model file will configure the chatbot for the specific use case of bank-related questions.
 
 - To create the model, run the following command:
@@ -44,7 +52,7 @@ After starting Ollama, create the custom BankChatbotModel to handle the chatbot 
 
 This command will use the provided `ModelFile` already in the repo to create the custom model for the chatbot.
 
-3. **Run the Node.js Server for the Chatbot UI**  
+4. **Run the Node.js Server for the Chatbot UI**  
 Start the local chatbot UI by running the following commands:
 
 - Install dependencies:
@@ -58,7 +66,7 @@ Start the local chatbot UI by running the following commands:
 
 The chatbot UI will be accessible at `http://localhost:4000`.
 
-4. **Start the Optional `ollamaForwarder.js` (for running the chatbot on a different domain)**  
+5. **Start the Optional `ollamaForwarder.js` (for running the chatbot on a different domain)**  
 If you are running the chatbot UI and Ollama on separate domains or different servers, you can start the optional `ollamaForwarder.js` script to forward the requests to your Ollama instance.
 
 - To start the forwarder, run:
