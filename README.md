@@ -56,7 +56,7 @@ Start the local chatbot UI by running the following commands:
   npm start
   ```
 
-The chatbot UI will be accessible at `http://localhost:3000`.
+The chatbot UI will be accessible at `http://localhost:4000`.
 
 4. **Start the Optional `ollamaForwarder.js` (for running the chatbot on a different domain)**  
 If you are running the chatbot UI and Ollama on separate domains or different servers, you can start the optional `ollamaForwarder.js` script to forward the requests to your Ollama instance.
