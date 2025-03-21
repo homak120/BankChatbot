@@ -107,10 +107,11 @@ This GIF demonstrates how the chatbot restricts its responses based on pre-confi
 
 ---
 
-## Contributing
+## Summary of Learning
 
-Feel free to contribute to the project by submitting issues and pull requests. If you have ideas for new features or improvements, we welcome your contributions!
+This project has been a valuable learning experience in setting up and running a **customer-local LLM using Ollama**. Through building the BankChatBot, I gained hands-on experience with **deploying** and **interaction** with a **custom language model** for real-world use cases, like assisting with banking queries. The project also demonstrated the power of LLMs for interactive customer support.
 
-## License
+## Next Steps
 
-This project is licensed under the MIT License.
+For the next step, I plan to explore a new project using the **[OpenAI Agents SDK](https://openai.github.io/openai-agents-python/)**. This will allow me to build more dynamic and intelligent agents capable of handling complex tasks and multi-step interactions. I’m excited to dive deeper into the world of autonomous agents and see how they can be leveraged to create sophisticated applications. More to come:  **[EduAgent](https://github.com/homak120/EduAgent)**
+
