@@ -46,7 +46,7 @@ BankChatBot is a learning project designed to demonstrate the potential use of L
    ollama list
    ```
 
-3. **Create the Custom BankChatbotModel from ModelFile**  
+2. **Create the Custom BankChatbotModel from ModelFile**  
    After starting Ollama, create the custom BankChatbotModel to handle the chatbot queries. The model file will configure the chatbot for the specific use case of bank-related questions.
 
 - To create the model, run the following command:
@@ -60,7 +60,7 @@ BankChatBot is a learning project designed to demonstrate the potential use of L
    ```bash
    ollama list
    ```
-4. **Run the Node.js Server for the Chatbot UI**  
+3. **Run the Node.js Server for the Chatbot UI**  
 Start the local chatbot UI by running the following commands:
 
 - Install dependencies:
@@ -74,7 +74,7 @@ Start the local chatbot UI by running the following commands:
 
 The chatbot UI will be accessible at `http://localhost:4000`.
 
-5. **Start the Optional `ollamaForwarder.js` (for running the chatbot on a different domain)**  
+4. **Start the Optional `ollamaForwarder.js` (for running the chatbot on a different domain)**  
 If you are running the chatbot UI and Ollama on separate domains or different servers, you can start the optional `ollamaForwarder.js` script to forward the requests to your Ollama instance.
 
 - To start the forwarder, run:
@@ -112,6 +112,21 @@ This GIF demonstrates how the chatbot restricts its responses based on pre-confi
 This project has been a valuable learning experience in setting up and running a **customer-local LLM using Ollama**. Through building the BankChatBot, I gained hands-on experience with **deploying** and **interaction** with a **custom language model** for real-world use cases, like assisting with banking queries. The project also demonstrated the power of LLMs for interactive customer support.
 
 ## Next Steps
+1. I'm reengineering our approach by replacing a static system prompt with a dynamic knowledge base. To accomplish this, I'm developing a Python-based Retrieval Augmented Generation (RAG) framework using **scikit-learn**. This framework leverages techniques like **TF-IDF vectorization** and cosine similarity to efficiently retrieve and rank relevant knowledge snippets, thereby improving the system’s context-awareness and response quality.
+2. I plan to explore a new project using the **[OpenAI Agents SDK](https://openai.github.io/openai-agents-python/)**. This will allow me to build more dynamic and intelligent agents capable of handling complex tasks and multi-step interactions. I’m excited to dive deeper into the world of autonomous agents and see how they can be leveraged to create sophisticated applications. More to come:  **[EduAgent](https://github.com/homak120/EduAgent)**
 
-For the next step, I plan to explore a new project using the **[OpenAI Agents SDK](https://openai.github.io/openai-agents-python/)**. This will allow me to build more dynamic and intelligent agents capable of handling complex tasks and multi-step interactions. I’m excited to dive deeper into the world of autonomous agents and see how they can be leveraged to create sophisticated applications. More to come:  **[EduAgent](https://github.com/homak120/EduAgent)**
+## Software Engineer Insight
+
+Thank you for taking the time to read through the entire README! If you're still here, it’s clear that you’re a curious, die-hard software engineer, and I truly appreciate your interest in diving deep into the details of this project.
+
+There are a few things I’d like to share with you from a software engineering perspective:
+
+1. **Why I Don’t React (Yet):**
+   You might notice that this project isn't built using React or any other modern front-end framework. The main focus here is learning and experimenting with Large Language Models (LLMs) rather than UI enhancement. My goal was to concentrate on the backend and LLM integration for now, and UI/UX improvements may come at a later stage. As the project evolves, I might shift focus and integrate a more dynamic, responsive front-end. Stay tuned!
+
+2. **Why There's `build.js` and `ollamaForwarder.js`:**
+   You might be wondering why there’s a `build.js` file and the `ollamaForwarder.js` script included in the project. The reason lies in my choice to use dynamic JavaScript logic to apply CSS styles. This allows for a flexible, reusable approach to embedding the chatbot in various websites. By using a single JavaScript snippet, I can easily inject the chatbot into any existing site, providing a clean and consistent visual demo without having to modify each page’s core structure. It’s all about making the process smoother and faster for showcasing the LLM’s capabilities, with minimal fuss for the user.
+
+Thanks again for your curiosity and for being a part of this learning journey!
+
 
