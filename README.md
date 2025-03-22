@@ -127,6 +127,9 @@ There are a few things I’d like to share with you from a software engineering 
 2. **Why There's `build.js` and `ollamaForwarder.js`:**
    You might be wondering why there’s a `build.js` file and the `ollamaForwarder.js` script included in the project. The reason lies in my choice to use dynamic JavaScript logic to apply CSS styles. This allows for a flexible, reusable approach to embedding the chatbot in various websites. By using a single JavaScript snippet, I can easily inject the chatbot into any existing site, providing a clean and consistent visual demo without having to modify each page’s core structure. It’s all about making the process smoother and faster for showcasing the LLM’s capabilities, with minimal fuss for the user.
 
+3. **Why I Use `/generate` API Instead of `/chat`:**
+   If you take a look at the source code for the LLM API call, you’ll see that I use the `/generate` endpoint instead of `/chat`. This choice is made to optimize and save on local RAM usage. The `/chat` endpoint would require maintaining chat history, which can increase memory consumption. However, you can easily switch to the `/chat` API if you prefer to have the app maintain chat history. This might be an interesting feature to explore further in the future.
+
 Thanks again for your curiosity and for being a part of this learning journey!
 
 
