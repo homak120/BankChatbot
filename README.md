@@ -95,15 +95,18 @@ This GIF demonstrates the chatbot UI loading and initiating a conversation with 
 
 2. **Assisting with Account Opening Questions**  
 This GIF shows the chatbot handling queries related to opening a bank account, showcasing its ability to address common customer questions.
-<img src="doc/assistAccountOpeningQuestions.gif" alt="Assisting with Account Opening Questions" width="400" height="450" />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="doc/assistAccountOpeningQuestions.gif" alt="Assisting with Account Opening Questions" width="400" height="450" />
 
 3. **Smart AI Response to Account Opening Queries**  
 This GIF highlights the chatbot’s intelligent response when a customer asks about account opening. The AI provides a helpful and informative reply.
-<img src="doc/smartAIResponse.gif" alt="Smart AI Response to Account Opening Queries" width="400" height="450" />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="doc/smartAIResponse.gif" alt="Smart AI Response to Account Opening Queries" width="400" height="450" />
 
 4. **Restricted Assistance Based on Configured Roles**  
 This GIF demonstrates how the chatbot restricts its responses based on pre-configured roles. For example, the chatbot may limit assistance to account opening questions only.
-<img src="doc/restrictOnlyAssistBasedOnConfiguredRole.gif" alt="Restricted Assistance Based on Configured Roles" width="400" height="450" />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="doc/restrictOnlyAssistBasedOnConfiguredRole.gif" alt="Restricted Assistance Based on Configured Roles" width="400" height="450" />
 
 ---
 
