@@ -56,10 +56,12 @@ BankChatBot is a learning project designed to demonstrate the potential use of L
 
    This command will use the provided `ModelFile` already in the repo to create the custom model for the chatbot.
 
-- Confirm your custome model is created
+- Confirm your custom model is created
    ```bash
    ollama list
    ```
+- Additional: Implementing the RAG to augment the chatbot's knowledge base, aiming to replace product details in the modelFile.
+
 3. **Run the Node.js Server for the Chatbot UI**  
 Start the local chatbot UI by running the following commands:
 
