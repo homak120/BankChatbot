@@ -6,6 +6,7 @@ const { Readable } = require('stream');
 const app = express();
 const PORT = 5566;
 const OLLAMA_API_URL = 'http://localhost:11434';
+const RAG_API_URL = 'http://localhost:5567';
 
 app.use(express.json());
 app.use(cors()); // This will allow requests from any origin
@@ -21,6 +22,26 @@ app.post('/api/generate', async (req, res) => {
   try {
     console.log('Income Request:', req.body);
     console.dir(req.body, { depth: null, colors: true });
+    user_query = req.body.prompt;
+
+    const ragResponse = await fetch(`${RAG_API_URL}/retrieveAdditionalKnowledge?userQuery=${encodeURIComponent(user_query)}`, {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' }
+    });
+
+    if (!ragResponse.ok) {
+      throw new Error(`RAG API error: ${ragResponse.statusText}`);
+    }
+    
+    const ragData = await ragResponse.json();
+    ragData.listOfAdditionalKnowledge.forEach((element) => {
+          user_query += '\n\n' + element.text;
+      }
+    );
+    
+    req.body.prompt = user_query;
+    console.log('body:', req.body.prompt);
+
     const response = await fetch(OLLAMA_API_URL + '/api/generate', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
