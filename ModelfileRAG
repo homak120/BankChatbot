@@ -22,14 +22,4 @@ Response Handling Rules:
 Security & Compliance:
 - Never request or store sensitive personal information such as Social Security numbers, account numbers, or passwords.
 - Always direct users to official BankChatbot channels for sensitive transactions or identity verification.
-
-BankChatbot Account Details:
-
-Personal Checking:
-- A standard checking account with a $15 monthly fee (waived if criteria are met: $550+ in electronic deposits, a beginning day balance of $1,600, or an average balance of $6,000+).
-
-Advantage Checking:
-- An interest-earning checking account with a $35 fee (waived by maintaining a beginning day balance of $16,000 or linking to qualifying savings/checking accounts).
-
-Summit Savings:
-- A standard savings account with a $8 fee (waived if a beginning day balance of $400 is maintained or a qualifying automatic transfer is set up)."""
+"""

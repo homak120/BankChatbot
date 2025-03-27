@@ -30,7 +30,7 @@ function initializeChatbot(root) {
     const messageElement = chatElement.querySelector("div");
 
     const requestBody = {
-      model: "BankChatbotModel:latest", // Ensure you have this model installed in Ollama 
+      model: "BankChatbotModel:02", // Ensure you have this model installed in Ollama 
       prompt: userMessage,
       stream: true    // Enable streaming
     };

@@ -34,10 +34,13 @@ app.post('/api/generate', async (req, res) => {
     }
     
     const ragData = await ragResponse.json();
-    ragData.listOfAdditionalKnowledge.forEach((element) => {
-          user_query += '\n\n' + element.text;
-      }
-    );
+    if (ragData.listOfAdditionalKnowledge.length > 0) {
+      user_query += '\n\nBankChatbot Account Detail Knowledge:';
+      ragData.listOfAdditionalKnowledge.forEach((element) => {
+            user_query += '\n\n' + element.text;
+        }
+      );
+    }
     
     req.body.prompt = user_query;
     console.log('body:', req.body.prompt);
