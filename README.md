@@ -86,6 +86,12 @@ If you are running the chatbot UI and Ollama on separate domains or different se
 
 This will ensure the UI can communicate with the Ollama instance even if they are running on different domains. If you are running both on `localhost`, you don’t need to use this script as the UI can directly access the local Ollama instance.
 
+---
+
+### System Architechture
+
+![System Architechture](doc/RAGSystemDigram.png)
+
 ### Demo
 
 The following demo GIFs illustrate the functionality and features of the BankChatBot:
