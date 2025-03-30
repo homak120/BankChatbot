@@ -114,6 +114,8 @@ This GIF demonstrates how the chatbot restricts its responses based on pre-confi
 
 ![System Architechture](doc/RAGSystemDigram.png)
 
+![Context Window](doc/contextWindow.png)
+
 ---
 
 ## Summary of Learning
