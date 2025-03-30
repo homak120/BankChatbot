@@ -88,10 +88,6 @@ This will ensure the UI can communicate with the Ollama instance even if they ar
 
 ---
 
-### System Architechture
-
-![System Architechture](doc/RAGSystemDigram.png)
-
 ### Demo
 
 The following demo GIFs illustrate the functionality and features of the BankChatBot:
@@ -115,6 +111,8 @@ This GIF highlights the chatbot’s intelligent response when a customer asks ab
 This GIF demonstrates how the chatbot restricts its responses based on pre-configured roles. For example, the chatbot may limit assistance to account opening questions only.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="doc/restrictOnlyAssistBasedOnConfiguredRole.gif" alt="Restricted Assistance Based on Configured Roles" width="400" height="450" />
+
+![System Architechture](doc/RAGSystemDigram.png)
 
 ---
 
